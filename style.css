@@ -1,0 +1,20 @@
+body{
+    background-color: white;
+    margin: 0 0;
+}
+@font-face {
+    font-family: ray-exterablack;
+    src: url(Ray-ExtraBlack.woff);
+}
+@font-face {
+    font-family: vazir;
+    src: url(Ray-ExtraBlack.woff);
+}
+h1{
+    font-family: ray-exterablack;
+    direction: rtl;
+}
+p{
+    font-family: vazir;
+    direction: rtl;
+}
