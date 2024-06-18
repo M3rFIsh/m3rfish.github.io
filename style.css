@@ -1,17 +1,95 @@
-body{
-    background-color: white;
-    margin: 0 0;
-}
-@font-face {
-    font-family: ray-exterablack;
-    src: url(Ray-ExtraBlack.woff);
+:root {
+  --m: 4rem;
+  --blackgrey: #2f323a;
+  --red: #ff6565;
+  --pink: #ff64f9;
+  --purple: #6b5fff;
+  --blue: #4d8aff;
+  --green: #5bff89;
+  --yellow: #ffee55;
+  --orange: #ff6d1b;
 }
 
-h1{
-    font-family: ray-exterablack;
-    direction: rtl;
+body {
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif, vazir;
+  background-color: #2f323a;
 }
-p{
-    font-family: vazir;
-    direction: rtl;
+
+a,
+a:visited,
+a:hover {
+  color: white;
+  text-decoration: none;
 }
+
+.nav {
+  display: inline-block;
+  width: 100%;
+}
+
+.navholder {
+  position: relative;
+  z-index: 1;
+  background-color: #1c1d20;
+  height: 60px;
+  text-align: center;
+}
+.navholder img {
+  height: 40px;
+  padding: 9px;
+}
+.navholder .atxt {
+  position: relative;
+  margin: 0px 10px;
+  bottom: 23px;
+}
+
+#logo {
+  position: relative;
+  bottom: 50px;
+}
+
+#name {
+  display: flexbox;
+  position: relative;
+  color: rgb(255, 255, 255);
+  width: 90%;
+  bottom: 500px;
+}
+#name img {
+  display: block;
+  margin-left: auto;
+  margin-right: 10vw;
+}
+#name h1 {
+  font-size: 75px;
+  margin: 0vh 0 0 50px;
+  width: 200px;
+}
+#name h3 {
+  font-size: 16px;
+  font-family: Arial;
+  margin-left: 55px;
+  opacity: 70%;
+}
+
+#bgblurred {
+  height: 60vh;
+  width: 100%;
+  background-image: radial-gradient(circle at top left, var(--green) 0%, transparent 40%), radial-gradient(circle at bottom right, pink 0%, transparent 25%), radial-gradient(circle at top right, var(--yellow), transparent 40%), radial-gradient(circle at bottom left, var(--purple), transparent 30%);
+  filter: blur(80px);
+  animation-name: bgchange;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bgchange {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 100vw;
+  }
+}/*# sourceMappingURL=style.css.map */
