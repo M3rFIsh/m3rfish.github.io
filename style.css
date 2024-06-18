@@ -67,10 +67,24 @@ a:hover {
   margin-top: 50px;
 }
 
+.blur {
+  position: relative;
+  z-index: -1;
+  border: rgb(110, 110, 110) solid 3px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.993);
+  mix-blend-mode: overlay;
+}
+
 footer {
-  height: auto;
-  background-color: black;
-  mix-blend-mode: lighten;
+  padding: 50px;
+}
+footer h1 {
+  border-bottom: rgb(221, 221, 221) solid 3px;
+}
+footer .blur {
+  height: 200px;
+  top: 200px;
 }
 
 .email {
@@ -87,6 +101,10 @@ footer {
 }
 .phone img {
   margin-right: 5px;
+}
+.phone p {
+  font-size: 26px;
+  margin-top: 0px;
 }
 
 #bgblurred {
