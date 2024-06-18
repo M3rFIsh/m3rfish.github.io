@@ -61,9 +61,16 @@ a:hover {
   border-radius: 30px;
   box-shadow: 0 0 60px 2px #fff;
 }
+#name #scroll {
+  mix-blend-mode: lighten;
+  width: 70px;
+  margin-top: 50px;
+}
 
 footer {
   height: auto;
+  background-color: black;
+  mix-blend-mode: lighten;
 }
 
 .email {
@@ -73,6 +80,13 @@ footer {
   font-size: 20px;
   margin-top: 5px;
   margin-left: 10px;
+}
+
+.phone {
+  margin-left: 100px;
+}
+.phone img {
+  margin-right: 5px;
 }
 
 #bgblurred {
