@@ -1,6 +1,6 @@
 :root {
   --m: 4rem;
-  --n: 100px;
+  --n: 10vw;
   --blackgrey: #2f323a;
   --red: #ff6565;
   --pink: #ff64f9;
@@ -12,10 +12,12 @@
 }
 
 body {
+  width: 100%;
   height: 100%;
   margin: 0;
   font-family: sans-serif, vazir;
   background-color: #2f323a;
+  overflow: hidden;
 }
 
 a,
@@ -31,6 +33,7 @@ a:hover {
 }
 
 .navholder {
+  display: block;
   position: relative;
   z-index: 1;
   background-color: #1c1d20;
@@ -47,11 +50,6 @@ a:hover {
   bottom: 23px;
 }
 
-#logo {
-  position: relative;
-  bottom: 50px;
-}
-
 #name {
   display: inline-block;
   position: relative;
@@ -62,7 +60,8 @@ a:hover {
 #name img {
   display: block;
   margin-left: auto;
-  margin-right: 10vw;
+  margin-right: 0;
+  max-width: 500px;
 }
 #name h1 {
   font-size: 75px;
