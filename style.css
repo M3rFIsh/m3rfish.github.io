@@ -16,8 +16,14 @@ body {
   width: 100%;
   height: auto;
   margin: 0;
-  font-family: inter;
+  font-family: "Inter";
   background-color: #2f323a;
+}
+
+nav {
+  position: relative;
+  z-index: 1;
+  opacity: 70%;
 }
 
 a,
@@ -27,121 +33,6 @@ a:hover {
   text-decoration: none;
 }
 
-#name {
-  display: inline-block;
-  position: relative;
-  color: rgb(255, 255, 255);
-  width: 100%;
-  bottom: 550px;
-}
-#name img {
-  display: block;
-  margin: 0px auto;
-  height: auto;
-  max-width: 30%;
-}
-#name h1 {
-  display: block;
-  font-size: 75px;
-  text-align: center;
-}
-#name h3 {
-  margin-bottom: 15px;
-  font-size: 16px;
-  font-family: Arial;
-  text-align: center;
-  opacity: 70%;
-}
-#name button {
-  width: 110px;
-  height: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  background-color: white;
-  border: none;
-  border-radius: 30px;
-  box-shadow: 0 0 60px 2px #fff;
-}
-#name #scroll {
-  mix-blend-mode: lighten;
-  width: 70px;
-  margin-top: 50px;
-}
-
-.blur {
-  position: relative;
-  z-index: -1;
-  border: rgb(110, 110, 110) solid 3px;
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.993);
-  mix-blend-mode: overlay;
-}
-
-footer {
-  padding: 50px;
-}
-footer h1 {
-  border-bottom: rgb(221, 221, 221) solid 3px;
-}
-footer .blur {
-  height: 200px;
-  top: 200px;
-}
-
-.email {
-  margin-left: 100px;
-}
-.email p {
-  font-size: 20px;
-  margin-top: 5px;
-  margin-left: 10px;
-}
-
-.phone {
-  margin-left: 100px;
-}
-.phone img {
-  margin-right: 5px;
-}
-.phone p {
-  font-size: 26px;
-  margin-top: 0px;
-}
-
-#works {
-  font-size: 60px;
-}
-
-.works {
-  position: relative;
-  top: -200px;
-  text-align: center;
-}
-.works button {
-  position: relative;
-  top: 50px;
-  color: #2f323a;
-  background-color: whites;
-  background-image: url(github-mark.svg);
-  background-repeat: no-repeat;
-  background-size: 30px;
-  background-position: 15px 5px;
-  height: 40px;
-  width: 30vh;
-  border-radius: 10px;
-  border: white solid 1px;
-}
-
-#bgblurred {
-  height: 60vh;
-  width: 100%;
-  background-image: radial-gradient(circle at top left, var(--green) 0%, transparent 40%), radial-gradient(circle at bottom right, pink 0%, transparent 25%), radial-gradient(circle at top right, var(--yellow), transparent 40%), radial-gradient(circle at bottom left, var(--purple), transparent 30%);
-  filter: blur(80px);
-  animation-name: bgchange;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-}
-
 @keyframes bgchange {
   0% {
     background-position: 0;
@@ -149,4 +40,82 @@ footer .blur {
   100% {
     background-position: 100vw;
   }
+}
+#bgblurred {
+  height: 80vh;
+  width: 100%;
+  background-image: radial-gradient(circle at top left, var(--green) 0%, transparent 40%), radial-gradient(circle at top right, var(--yellow), transparent 40%), radial-gradient(circle at bottom right, var(--pink), transparent 25%), radial-gradient(circle at bottom left, var(--purple), transparent 30%);
+  filter: blur(80px);
+  animation-name: bgchange;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+
+#name {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  bottom: 55vh;
+  color: rgb(255, 255, 255);
+}
+#name img {
+  width: 30%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+#name h1 {
+  text-align: center;
+  font-size: 75px;
+}
+#name h3 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  text-align: center;
+  opacity: 70%;
+}
+#name button {
+  width: 110px;
+  height: 30px;
+  font-weight: bold;
+  background-color: white;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 0 60px 2px #fff;
+}
+#name #scroll {
+  width: 70px;
+  height: auto;
+  margin-top: 50px;
+  mix-blend-mode: lighten;
+}
+
+#container_works {
+  text-align: center;
+  position: relative;
+  top: -140px;
+}
+#container_works h2 {
+  font-size: 60px;
+}
+#container_works button {
+  height: 40px;
+  width: 30vh;
+  position: relative;
+  top: 50px;
+  border-radius: 10px;
+  border: white solid 1px;
+  color: #2f323a;
+  background: white url(github-mark.svg) 15px 5px no-repeat;
+  background-size: 30px;
+}
+
+footer {
+  padding: 50px;
+}
+footer .contactme h2 {
+  margin-bottom: 50px;
+}
+footer .contactme div {
+  margin-bottom: 10px;
 }/*# sourceMappingURL=style.css.map */
