@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@700&display=swap");
+@font-face {
+  font-family: "rayE";
+  src: url(./Ray-ExtraBlack.woff);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-de: 1.3rem;
+  --duration: 3s;
+  --delay:0s;
+  --duration1: 1s;
+  --delay1: var(--duration);
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-size: var(--font-de);
+  font-family: "rayE";
+  background-color: black;
+}
+
+nav {
+  position: absolute;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 10;
+}
+nav #logo {
+  font-family: "rayE", sans-serif;
+}
+nav a {
+  color: white;
+  font-family: "rayE";
+  text-decoration: none;
+}
+nav li {
+  margin-top: 200%;
+  rotate: -90deg;
+}
+nav li::marker {
+  color: white;
+}
+nav p {
+  position: absolute;
+  right: 0;
+  direction: rtl;
+  line-height: 1.2rem;
+  margin-top: 20px;
+}
+
+.container-intro {
+  margin-left: 60px;
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row-reverse wrap;
+}
+.container-intro .container-images {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-intro .profile {
+  z-index: 1;
+  margin-top: 50px;
+  width: 30vh;
+  right: 0%;
+  border-radius: 10px;
+  box-shadow: white 0px 0px 40px;
+}
+.container-intro .img {
+  box-shadow: rgb(105, 105, 105) 0 0 15px;
+  border-radius: 8px;
+  position: absolute;
+  max-height: 100px;
+  z-index: -1;
+}
+.container-intro .feeling {
+  animation: feeling var(--duration) var(--delay) ease-in-out forwards;
+}
+.container-intro .peidast {
+  animation: peidast var(--duration) var(--delay) ease-in-out forwards;
+}
+.container-intro .ga-render {
+  animation: ga-render var(--duration) var(--delay) ease-in-out forwards;
+}
+.container-intro .robotic-arm {
+  animation: robotic-arm var(--duration) var(--delay) ease-in-out forwards;
+}
+.container-intro .github-icon {
+  height: 45px;
+  box-shadow: none;
+  animation: github-icon var(--duration1) var(--delay1) ease-out forwards;
+}
+.container-intro .photoshop-icon {
+  height: 35px;
+  filter: invert(75%);
+  box-shadow: none;
+  animation: photoshop-icon var(--duration1) calc(var(--delay1) + 0.5s) ease-out forwards;
+}
+.container-intro .html-icon {
+  height: 35px;
+  filter: invert(75%);
+  box-shadow: none;
+  animation: html-icon var(--duration1) calc(var(--delay1) + 1s) ease-out forwards;
+}
+.container-intro .intro-text {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.container-intro .intro-text .intro-name {
+  color: white;
+  font-size: 350%;
+  display: inline-block;
+  line-height: 4.5rem;
+  direction: rtl;
+}
+.container-intro .intro-text .job {
+  width: 20rem;
+  color: white;
+  text-wrap: wrap;
+  font-family: "vazirmatn", sans-serif;
+}
+
+@keyframes feeling {
+  100% {
+    transform: translate(150%);
+    rotate: -30deg;
+  }
+}
+@keyframes peidast {
+  100% {
+    transform: translate(-150%);
+    rotate: 30deg;
+  }
+}
+@keyframes ga-render {
+  100% {
+    rotate: 25deg;
+    transform: translate(290%);
+  }
+}
+@keyframes robotic-arm {
+  100% {
+    rotate: 40deg;
+    transform: translate(0, 180%);
+  }
+}
+@keyframes github-icon {
+  100% {
+    transform: translate(0, -300%);
+    rotate: 5deg;
+  }
+}
+@keyframes photoshop-icon {
+  100% {
+    transform: translate(100%, 500%);
+    rotate: 10deg;
+  }
+}
+@keyframes html-icon {
+  100% {
+    transform: translate(230%, 500%);
+    rotate: -6deg;
+  }
+}/*# sourceMappingURL=style.css.map */

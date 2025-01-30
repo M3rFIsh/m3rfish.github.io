@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@700&display=swap');
+@font-face {
+    font-family: "rayE";
+    src: url(./Ray-ExtraBlack.woff);
+}
+
+// reset
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// variables
+:root{
+    --font-de: 1.3rem;
+    --duration: 3s;
+    --delay:0s;
+
+    --duration1: 1s;
+    --delay1: var(--duration);
+}
+
+// styles
+body{
+    width: 100%;
+    min-height:100vh;
+    font-size: var(--font-de);
+    font-family: 'rayE' ;
+    background-color: black;
+}
+
+nav{
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap ;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 10;
+    #logo{
+        font-family: 'rayE',sans-serif;
+    }
+    a{
+        color: white;
+        font-family: 'rayE';
+        text-decoration: none;
+    }
+    li{
+        margin-top: 200%;
+        rotate: -90deg;
+    }
+    li::marker{
+        color: white;
+    }
+    p{
+        position: absolute;
+        right: 0;
+        direction: rtl;
+        line-height: 1.2rem;
+        margin-top: 20px;
+    }
+}
+
+.container-intro{
+    margin-left: 60px;
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row-reverse wrap;
+    
+    .container-images{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .profile{
+        z-index: 1;
+        margin-top: 50px;
+        width: 30vh;
+        right: 0%;
+        border-radius: 10px;
+        box-shadow: white 0px 0px 40px;
+    }
+
+
+    .img{
+        box-shadow: rgb(105, 105, 105) 0 0 15px;
+        border-radius: 8px;
+        position: absolute;
+        max-height: 100px;
+        z-index: -1;
+    }
+    .feeling{
+        animation: feeling var(--duration) var(--delay) ease-in-out forwards ;
+    }
+    .peidast{
+        animation: peidast var(--duration) var(--delay) ease-in-out forwards;
+    }
+    .ga-render{
+        animation: ga-render var(--duration) var(--delay) ease-in-out forwards;
+    }
+    .robotic-arm{
+        animation: robotic-arm var(--duration) var(--delay) ease-in-out forwards;
+    }
+    .github-icon{
+        height: 45px;
+        box-shadow: none;
+        animation: github-icon var(--duration1) var(--delay1) ease-out forwards;
+    }
+    .photoshop-icon{
+        height:35px;
+        -webkit-filter: invert(75%);
+        filter: invert(75%);
+        box-shadow: none;
+        animation: photoshop-icon var(--duration1)  calc(var(--delay1) + 0.5s) ease-out forwards ;
+    }
+    .html-icon{
+        height: 35px;
+        -webkit-filter: invert(75%);
+        filter: invert(75%);
+        box-shadow: none;
+        animation: html-icon var(--duration1) calc(var(--delay1) + 1s) ease-out forwards;
+    }
+
+    .intro-text{
+        display:flex;
+        flex-flow: column nowrap;
+        .intro-name{
+
+            color: white;
+            font-size: 350%;
+            display: inline-block;
+            line-height: 4.5rem;
+            direction: rtl;
+        }
+        .job{
+            width: 20rem;
+            color: white;
+            text-wrap: wrap ;
+            font-family: 'vazirmatn',sans-serif;
+        }
+    }
+}
+
+@keyframes feeling {
+    100%{
+        transform: translate(150%);
+        rotate: -30deg;
+    }
+}
+@keyframes peidast {
+    100%{
+        transform: translate(-150%);
+        rotate: 30deg;
+    }
+}
+@keyframes ga-render {
+    100%{
+        rotate: 25deg;
+        transform: translate(290%);
+    }
+}
+@keyframes robotic-arm {
+    100%{
+        rotate: 40deg ;
+        transform: translate(0,180%);
+    }
+}
+@keyframes github-icon {
+    100%{
+        transform: translate(0,-300%);
+        rotate: 5deg;
+    }
+}
+@keyframes photoshop-icon {
+    100%{
+        transform: translate(100%, 500%);
+        rotate: 10deg;
+    }
+}
+@keyframes html-icon {
+    100%{
+        transform: translate(230%,500%);
+        rotate: -6deg;
+    }
+}
