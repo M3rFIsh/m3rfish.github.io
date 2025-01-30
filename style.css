@@ -4,9 +4,9 @@
   src: url(./Ray-ExtraBlack.woff);
 }
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 :root {
@@ -24,22 +24,23 @@
 }
 
 body {
-  width: 100%;
-  min-height: 100vh;
-  font-size: var(--font-de);
-  font-family: "rayE";
   background-color: black;
   color: white;
+  font-family: "rayE";
+  font-size: var(--font-de);
+  min-height: 100vh;
+  width: 100%;
 }
 
 .circle {
-  position: sticky;
-  margin: 0 auto;
-  width: 500px;
-  height: 15vh;
-  filter: blur(80px);
-  border-radius: 50%;
+  -webkit-filter: blur(80px);
   background-image: radial-gradient(circle at top left, var(--green) 40%, var(--blue) 0%);
+  border-radius: 50%;
+  filter: blur(80px);
+  height: 15vh;
+  margin: 0 auto;
+  position: sticky;
+  width: 500px;
 }
 
 nav {
@@ -50,8 +51,8 @@ nav {
   z-index: 10;
 }
 nav #logo {
-  font-family: "rayE", sans-serif;
   direction: rtl;
+  font-family: "rayE", sans-serif;
   line-height: 1.2rem;
   margin-top: 20px;
 }
@@ -69,33 +70,33 @@ nav li::marker {
 }
 
 .container-intro {
+  align-items: center;
+  display: flex;
+  flex-flow: row-reverse wrap;
+  height: 100vh;
+  justify-content: space-around;
   margin-left: 70px;
   width: 80vw;
-  height: 100vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-flow: row-reverse wrap;
 }
 .container-intro .container-images {
-  position: relative;
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
+  position: relative;
 }
 .container-intro .profile {
-  z-index: 1;
-  margin-top: 50px;
-  width: 30vh;
-  right: 0%;
   border-radius: 10px;
   box-shadow: white 0px 0px 40px;
+  margin-top: 50px;
+  right: 0%;
+  width: 30vh;
+  z-index: 1;
 }
 .container-intro .img {
-  box-shadow: rgb(105, 105, 105) 0 0 15px;
   border-radius: 8px;
-  position: absolute;
+  box-shadow: rgb(105, 105, 105) 0 0 15px;
   max-height: 100px;
+  position: absolute;
   z-index: -1;
 }
 .container-intro .feeling {
@@ -108,53 +109,55 @@ nav li::marker {
   animation: ga-render var(--duration) 3s ease-in-out forwards;
 }
 .container-intro .github-icon {
-  height: 45px;
-  box-shadow: none;
   animation: github-icon var(--duration1) var(--delay1) ease-out forwards;
+  box-shadow: none;
+  height: 45px;
 }
 .container-intro .photoshop-icon {
-  height: 35px;
-  filter: invert(75%);
-  box-shadow: none;
+  -webkit-filter: invert(75%);
   animation: photoshop-icon var(--duration1) calc(var(--delay1) + 0.5s) ease-out forwards;
+  box-shadow: none;
+  filter: invert(75%);
+  height: 35px;
 }
 .container-intro .html-icon {
-  height: 35px;
-  filter: invert(75%);
-  box-shadow: none;
+  -webkit-filter: invert(75%);
   animation: html-icon var(--duration1) calc(var(--delay1) + 1s) ease-out forwards;
+  box-shadow: none;
+  filter: invert(75%);
+  height: 35px;
 }
 .container-intro .intro-text {
   display: flex;
   flex-flow: column nowrap;
 }
 .container-intro .intro-text .intro-name {
-  font-size: 350%;
-  display: inline-block;
-  line-height: 4.5rem;
   direction: rtl;
+  display: inline-block;
+  font-size: 350%;
+  line-height: 4.5rem;
 }
 .container-intro .intro-text .job {
-  width: 20rem;
-  text-wrap: wrap;
   font-family: "vazirmatn", sans-serif;
+  text-wrap: wrap;
+  width: 20rem;
 }
 
 .container-coworkers {
-  margin-top: 50px;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  margin-left: 25%;
   font-family: "vazirmatn";
   gap: 30px;
+  justify-content: center;
+  margin-left: 25%;
+  margin-top: 50px;
 }
 .container-coworkers p {
-  margin: 0 auto;
-  width: 50%;
-  font-size: 1rem;
   direction: rtl;
+  font-size: 1rem;
+  margin: 0 auto;
   text-align: center;
+  width: 50%;
 }
 .container-coworkers .emojies {
   margin-left: 150px;
@@ -167,8 +170,8 @@ nav li::marker {
   position: absolute;
 }
 .container-coworkers .emojies .e1 {
-  transform: translate(-100px, -70px);
   rotate: 10deg;
+  transform: translate(-100px, -70px);
 }
 .container-coworkers .emojies .e2 {
   font-size: 50px;
@@ -184,9 +187,9 @@ nav li::marker {
   font-size: 130px;
 }
 .container-coworkers .co-emojie {
-  width: 40%;
-  rotate: 10deg;
   filter: invert(85%);
+  rotate: 10deg;
+  width: 40%;
 }
 .container-coworkers .co-card {
   width: 600;
@@ -201,13 +204,13 @@ nav li::marker {
 }
 
 .container-works {
+  align-items: center;
   color: #0F1012;
-  margin-left: 100px;
-  margin-top: 50px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
+  margin-left: 100px;
+  margin-top: 50px;
 }
 .container-works .card {
   align-items: center;
@@ -222,69 +225,69 @@ nav li::marker {
   padding: 10px;
 }
 .container-works .card img {
-  width: 200px;
   border-radius: 10px;
+  width: 200px;
 }
 .container-works .card h3 {
   text-align: center;
 }
 .container-works .card p {
-  font-size: 1rem;
   font-family: "vazirmatn";
+  font-size: 1rem;
   text-align: center;
   width: 70%;
 }
 
 .container-contact {
-  margin-top: 30px;
-  margin: 30px auto 0 auto;
-  max-width: 80%;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.295);
+  border-radius: 20px;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  align-items: center;
-  padding: 20px;
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.295);
+  margin-top: 30px;
+  margin: 30px auto 0 auto;
+  max-width: 80%;
   min-height: 250px;
   min-width: 500px;
+  padding: 20px;
 }
 .container-contact .blur {
   filter: blur(10px);
 }
 .container-contact h3 {
-  font-size: 80px;
   direction: rtl;
+  font-size: 80px;
   text-align: center;
 }
 .container-contact .container-c-card {
+  align-items: center;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
   gap: 50px;
+  justify-content: center;
 }
 .container-contact .container-c-card a {
   color: white;
   text-decoration: none;
 }
 .container-contact .container-c-card .c-card {
+  align-items: center;
   background-color: rgb(214, 214, 214);
   border-radius: 10px;
-  width: 150px;
   display: flex;
-  padding: 5px 20px;
   gap: 10px;
   justify-content: center;
-  align-items: center;
+  padding: 5px 20px;
+  width: 150px;
 }
 .container-contact .container-c-card .c-card img {
   height: 30px;
-  filter: invert(100%);
 }
 .container-contact .container-c-card .c-card p {
   display: inline;
   font-family: "vazirmatn";
+  color: var(--black);
 }
 
 @keyframes feeling {
