@@ -11,6 +11,7 @@
 
 :root {
   --font-de: 1.3rem;
+  --logosize:30%;
   --blue: #3975A9;
   --white:#FAF7FE;
   --black: #0F1012;
@@ -30,8 +31,17 @@ body {
   background-color: black;
 }
 
+.circle {
+  position: sticky;
+  margin: 0 auto;
+  width: 500px;
+  height: 15vh;
+  filter: blur(80px);
+  border-radius: 50%;
+  background-image: radial-gradient(circle at top left, var(--green) 40%, var(--blue) 0%);
+}
+
 nav {
-  position: absolute;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
@@ -40,6 +50,9 @@ nav {
 }
 nav #logo {
   font-family: "rayE", sans-serif;
+  direction: rtl;
+  line-height: 1.2rem;
+  margin-top: 20px;
 }
 nav a {
   color: white;
@@ -47,24 +60,17 @@ nav a {
   text-decoration: none;
 }
 nav li {
-  margin-top: 200%;
+  margin-top: 150%;
   rotate: -90deg;
 }
 nav li::marker {
   color: white;
 }
-nav p {
-  position: absolute;
-  right: 0;
-  direction: rtl;
-  line-height: 1.2rem;
-  margin-top: 20px;
-}
 
 .container-intro {
-  margin-left: 60px;
+  margin-left: 100px;
   width: 80vw;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -98,10 +104,7 @@ nav p {
   animation: peidast var(--duration) var(--delay) ease-in-out forwards;
 }
 .container-intro .ga-render {
-  animation: ga-render var(--duration) var(--delay) ease-in-out forwards;
-}
-.container-intro .robotic-arm {
-  animation: robotic-arm var(--duration) var(--delay) ease-in-out forwards;
+  animation: ga-render var(--duration) 3s ease-in-out forwards;
 }
 .container-intro .github-icon {
   height: 45px;
@@ -138,19 +141,99 @@ nav p {
   font-family: "vazirmatn", sans-serif;
 }
 
-.container-circle {
-  width: 90vw;
+.container-coworkers {
+  margin-top: 50px;
   display: flex;
-  align-items: center;
+  flex-flow: row wrap;
   justify-content: center;
+  margin-left: 25%;
+  color: white;
+  font-family: "vazirmatn";
+  gap: 30px;
 }
-.container-circle .circle {
-  width: 500px;
-  height: 200px;
-  filter: blur(80px);
-  border-radius: 50%;
-  animation: radial-blur 5s ease-in-out infinite alternate;
-  background-image: radial-gradient(circle at top left, var(--green) 40%, var(--blue) 0%);
+.container-coworkers p {
+  margin: 0 auto;
+  width: 50%;
+  font-size: 1rem;
+  direction: rtl;
+  text-align: center;
+}
+.container-coworkers .emojies {
+  margin-left: 150px;
+  position: relative;
+}
+.container-coworkers .emojies p {
+  font-size: 40px;
+}
+.container-coworkers .emojies .e1, .container-coworkers .emojies .e2, .container-coworkers .emojies .e3 {
+  position: absolute;
+}
+.container-coworkers .emojies .e1 {
+  transform: translate(-100px, -70px);
+  rotate: 10deg;
+}
+.container-coworkers .emojies .e2 {
+  font-size: 50px;
+  transform: translate(-120px, -200px);
+}
+.container-coworkers .emojies .e3 {
+  transform: translate(50px, -230px);
+}
+.container-coworkers .emojies .e4 {
+  transform: translate(0, -50px);
+}
+.container-coworkers .emojies .co-emojie {
+  font-size: 130px;
+}
+.container-coworkers .co-emojie {
+  width: 40%;
+  rotate: 10deg;
+  filter: invert(85%);
+}
+.container-coworkers .co-card {
+  width: 600;
+}
+.container-coworkers .co-card img {
+  display: block;
+  margin: 0 auto;
+  width: 30%;
+}
+.container-coworkers .co-card .masaf {
+  width: 20%;
+}
+
+.container-works {
+  margin-left: 100px;
+  margin-top: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.container-works .card {
+  align-items: center;
+  background-color: rgb(243, 242, 242);
+  border-radius: 10px;
+  box-shadow: white 0 0 15px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  margin: 30px;
+  min-height: 100%;
+  padding: 10px;
+}
+.container-works .card img {
+  width: 200px;
+  border-radius: 10px;
+}
+.container-works .card h3 {
+  text-align: center;
+}
+.container-works .card p {
+  font-size: 1rem;
+  font-family: "vazirmatn";
+  text-align: center;
+  width: 70%;
 }
 
 @keyframes feeling {
@@ -161,7 +244,7 @@ nav p {
 }
 @keyframes peidast {
   100% {
-    transform: translate(-150%);
+    transform: translate(-180%, 30%);
     rotate: 30deg;
   }
 }
@@ -169,12 +252,6 @@ nav p {
   100% {
     rotate: 25deg;
     transform: translate(290%);
-  }
-}
-@keyframes robotic-arm {
-  100% {
-    rotate: 40deg;
-    transform: translate(0, 180%);
   }
 }
 @keyframes github-icon {
