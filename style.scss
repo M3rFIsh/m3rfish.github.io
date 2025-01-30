@@ -144,7 +144,12 @@ nav{
         }
     }
 }
-
+.circle{
+    width: 300px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: aqua;
+}
 @keyframes feeling {
     100%{
         transform: translate(150%);
