@@ -36,7 +36,6 @@ body{
     font-family: 'rayE' ;
     font-size: var(--font-de);
     min-height:100vh;
-    width: 100%;
 }
 .circle{
     -webkit-filter: blur(80px);
@@ -81,7 +80,7 @@ nav{
     flex-flow: row-reverse wrap;
     height: 100vh;
     justify-content: space-around;
-    margin-left: 70px;
+    margin-left: 100px;
     width: 80vw;
     
     .container-images{
