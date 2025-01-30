@@ -11,6 +11,11 @@
 
 :root {
   --font-de: 1.3rem;
+  --blue: #3975A9;
+  --white:#FAF7FE;
+  --black: #0F1012;
+  --grey:#BDC4D3;
+  --green:#797340;
   --duration: 3s;
   --delay:0s;
   --duration1: 1s;
@@ -133,11 +138,19 @@ nav p {
   font-family: "vazirmatn", sans-serif;
 }
 
-.circle {
-  width: 300px;
+.container-circle {
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-circle .circle {
+  width: 500px;
   height: 200px;
+  filter: blur(80px);
   border-radius: 50%;
-  background-color: aqua;
+  animation: radial-blur 5s ease-in-out infinite alternate;
+  background-image: radial-gradient(circle at top left, var(--green) 40%, var(--blue) 0%);
 }
 
 @keyframes feeling {
