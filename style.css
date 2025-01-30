@@ -29,6 +29,7 @@ body {
   font-size: var(--font-de);
   font-family: "rayE";
   background-color: black;
+  color: white;
 }
 
 .circle {
@@ -68,7 +69,7 @@ nav li::marker {
 }
 
 .container-intro {
-  margin-left: 100px;
+  margin-left: 70px;
   width: 80vw;
   height: 100vh;
   display: flex;
@@ -128,7 +129,6 @@ nav li::marker {
   flex-flow: column nowrap;
 }
 .container-intro .intro-text .intro-name {
-  color: white;
   font-size: 350%;
   display: inline-block;
   line-height: 4.5rem;
@@ -136,7 +136,6 @@ nav li::marker {
 }
 .container-intro .intro-text .job {
   width: 20rem;
-  color: white;
   text-wrap: wrap;
   font-family: "vazirmatn", sans-serif;
 }
@@ -147,7 +146,6 @@ nav li::marker {
   flex-flow: row wrap;
   justify-content: center;
   margin-left: 25%;
-  color: white;
   font-family: "vazirmatn";
   gap: 30px;
 }
@@ -203,6 +201,7 @@ nav li::marker {
 }
 
 .container-works {
+  color: #0F1012;
   margin-left: 100px;
   margin-top: 50px;
   display: flex;
@@ -234,6 +233,58 @@ nav li::marker {
   font-family: "vazirmatn";
   text-align: center;
   width: 70%;
+}
+
+.container-contact {
+  margin-top: 30px;
+  margin: 30px auto 0 auto;
+  max-width: 80%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.295);
+  min-height: 250px;
+  min-width: 500px;
+}
+.container-contact .blur {
+  filter: blur(10px);
+}
+.container-contact h3 {
+  font-size: 80px;
+  direction: rtl;
+  text-align: center;
+}
+.container-contact .container-c-card {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.container-contact .container-c-card a {
+  color: white;
+  text-decoration: none;
+}
+.container-contact .container-c-card .c-card {
+  background-color: rgb(214, 214, 214);
+  border-radius: 10px;
+  width: 150px;
+  display: flex;
+  padding: 5px 20px;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.container-contact .container-c-card .c-card img {
+  height: 30px;
+  filter: invert(100%);
+}
+.container-contact .container-c-card .c-card p {
+  display: inline;
+  font-family: "vazirmatn";
 }
 
 @keyframes feeling {
