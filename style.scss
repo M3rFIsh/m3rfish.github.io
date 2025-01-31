@@ -30,12 +30,15 @@
 }
 
 // styles
+html,body{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
 body{
     background-color: black;
     color: white;
     font-family: 'rayE' ;
     font-size: var(--font-de);
-    min-height:100vh;
 }
 .circle{
     -webkit-filter: blur(80px);
@@ -80,7 +83,7 @@ nav{
     flex-flow: row-reverse wrap;
     height: 100vh;
     justify-content: space-around;
-    margin-left: 100px;
+    margin-left: 7%;
     width: 80vw;
     
     .container-images{
@@ -158,7 +161,7 @@ nav{
     font-family: 'vazirmatn';
     gap: 30px;
     justify-content: center;
-    margin-left: 25%;
+    margin-left: 7%;
     margin-top: 50px;
     p{
         direction: rtl;
@@ -200,6 +203,7 @@ nav{
         filter: invert(85%);
         rotate: 10deg;
         width: 40%;
+        margin-left: 7%;
     }
     .co-card{
         width: 600;
@@ -220,7 +224,7 @@ nav{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    margin-left:100px;
+    margin-left:7%;
     margin-top: 50px;
     .card{
         align-items: center;
@@ -257,10 +261,10 @@ nav{
     flex-flow: column wrap;
     justify-content: center;
     margin-top: 30px;
-    margin: 30px auto 0 auto;
+    margin: 30px 7% 0 auto;
     max-width: 80%;
     min-height: 250px;
-    min-width: 500px;
+    min-width: 80%;
     padding: 20px;
     .blur{
         filter: blur(10px);

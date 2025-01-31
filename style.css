@@ -23,12 +23,16 @@
   --delay1: var(--duration);
 }
 
+html, body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: black;
   color: white;
   font-family: "rayE";
   font-size: var(--font-de);
-  min-height: 100vh;
 }
 
 .circle {
@@ -74,7 +78,7 @@ nav li::marker {
   flex-flow: row-reverse wrap;
   height: 100vh;
   justify-content: space-around;
-  margin-left: 100px;
+  margin-left: 7%;
   width: 80vw;
 }
 .container-intro .container-images {
@@ -148,7 +152,7 @@ nav li::marker {
   font-family: "vazirmatn";
   gap: 30px;
   justify-content: center;
-  margin-left: 25%;
+  margin-left: 7%;
   margin-top: 50px;
 }
 .container-coworkers p {
@@ -189,6 +193,7 @@ nav li::marker {
   filter: invert(85%);
   rotate: 10deg;
   width: 40%;
+  margin-left: 7%;
 }
 .container-coworkers .co-card {
   width: 600;
@@ -208,7 +213,7 @@ nav li::marker {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  margin-left: 100px;
+  margin-left: 7%;
   margin-top: 50px;
 }
 .container-works .card {
@@ -245,10 +250,10 @@ nav li::marker {
   flex-flow: column wrap;
   justify-content: center;
   margin-top: 30px;
-  margin: 30px auto 0 auto;
+  margin: 30px 7% 0 auto;
   max-width: 80%;
   min-height: 250px;
-  min-width: 500px;
+  min-width: 80%;
   padding: 20px;
 }
 .container-contact .blur {
